@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>실습1 : 플러스/마이너스</title>
+    <style>
+        .tf_val{text-align:center}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var nowVal = 0;
+            $(".tf_val").val(nowVal);
+            $(".plus").on("click", function(){
+                if(nowVal >= 0){
+                    nowVal = nowVal + 1;
+                    $(".tf_val").val(nowVal);
+                }
+            });
+            $(".minus").on("click", function(){
+                if(nowVal > 0) {
+                    nowVal = nowVal - 1;
+                    $(".tf_val").val(nowVal);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="box_plusminus">
+    <button type="button" class="minus">-</button>
+    <input type="text" value="" class="tf_val">
+    <button type="button" class="plus">+</button>
+</div>
+</body>
+</html>
