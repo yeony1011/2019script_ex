@@ -12,20 +12,21 @@
     <script>
         $(document).ready(function(){
             var nowVal = 0;
-            $(".tf_val").val(nowVal);
+            var $tfVal = $(".tf_val");
+            $tfVal.val(nowVal);
             $(".plus").on("click", function(){
                 if(nowVal >= 0){
                     nowVal = nowVal + 1;
-                    $(".tf_val").val(nowVal);
+                    $tfVal.val(nowVal);
                 }
             });
             $(".minus").on("click", function(){
                 if(nowVal > 0){
                     nowVal = nowVal - 1;
-                    $(".tf_val").val(nowVal);
+                    $tfVal.val(nowVal);
                 }
             });
-            $(".tf_val").on("keyup", function(e){
+            $tfVal.on("keyup", function(e){
                 if(e.keyCode >= 48 && e.keyCode <= 57){
                     nowVal = Number($(this).val());
                 }else{
