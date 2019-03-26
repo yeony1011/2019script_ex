@@ -2,8 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>실습1 : 플러스/마이너스</title>
     <style>
@@ -21,9 +20,16 @@
                 }
             });
             $(".minus").on("click", function(){
-                if(nowVal > 0) {
+                if(nowVal > 0){
                     nowVal = nowVal - 1;
                     $(".tf_val").val(nowVal);
+                }
+            });
+            $(".tf_val").on("keyup", function(e){
+                if(e.keyCode >= 48 && e.keyCode <= 57){
+                    nowVal = Number($(this).val());
+                }else{
+                    alert("숫자로 넣어주세요.");
                 }
             });
         });
