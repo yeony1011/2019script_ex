@@ -1,10 +1,10 @@
 # 플러스/마이너스 카운트 기능
 
-## 제이쿼리
+## 제이쿼리 (AS-IS)
 - [결과화면 보기](https://yeony1011.github.io/2019script_ex/190325/190325.html)
 - [해당 소스 보기](https://yeony1011.github.io/2019script_ex/190325/common.js)
 
-## 자바스크립트
+## 자바스크립트 (TO-BE)
 - [결과화면 보기](https://yeony1011.github.io/2019script_ex/190325/190325_v2.html)
 - [해당 소스 보기](https://yeony1011.github.io/2019script_ex/190325/common_v2.js)
 
