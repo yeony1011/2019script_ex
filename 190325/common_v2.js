@@ -7,23 +7,34 @@
     var minus = document.querySelector(".minus");
     tfVal.value = nowVal;
 
-    plus.addEventListener("click", function(){
+    // 증가
+    function increase(){
         if(nowVal >= 0){
             nowVal++;
             tfVal.value = nowVal;
         }
-    });
-    minus.addEventListener("click", function(){
+    }
+
+    // 감소
+    function decrease(){
         if(nowVal > 0){
             nowVal--;
             tfVal.value = nowVal;
         }
-    });
-    tfVal.addEventListener("keyup", function(e){
-        if(e.keyCode >= 48 && e.keyCode <= 57){
+    }
+
+    // 숫자체크
+    function numChk(e){
+        var key = e.keyCode || e.which; // 모든 브라우저에서 작동할 수 있음
+        if(key === 8) return;   // back키 버튼 : 함수 빠져나감
+        if(key >= 48 && key <= 57){ // 숫자키 버튼
             nowVal = Number(this.value);
         }else{
             alert("숫자로 넣어주세요.");
         }
-    });
+    }
+
+    plus.addEventListener("click", increase);
+    minus.addEventListener("click", decrease);
+    tfVal.addEventListener("keyup", numChk);
 })();
