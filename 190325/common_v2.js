@@ -1,7 +1,9 @@
 "use strict";
 
 (function(){
-    var nowVal = 0;
+    var nowVal = 1;
+    var minVal = 1;
+    var maxVal = 30;
     var tfVal = document.querySelector(".tf_val");
     var plus = document.querySelector(".plus");
     var minus = document.querySelector(".minus");
@@ -9,7 +11,7 @@
 
     // 증가
     function increase(){
-        if(nowVal >= 0){
+        if(nowVal < maxVal){
             nowVal++;
             tfVal.value = nowVal;
         }
@@ -17,7 +19,7 @@
 
     // 감소
     function decrease(){
-        if(nowVal > 0){
+        if(nowVal > minVal){
             nowVal--;
             tfVal.value = nowVal;
         }
