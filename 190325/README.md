@@ -13,4 +13,4 @@
 - [x] 0이상일때 증가 O, 0이하일때 감소 X
 - [x] input창에 사용자입력 기능
 - [x] min/max값 입력을 추가하여 제어
-- [ ] min/max값에 따라 -, + 버튼 disabled 처리
+- [x] min/max값에 따라 -, + 버튼 disabled 처리

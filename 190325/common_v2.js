@@ -3,10 +3,10 @@
 (function(){
     var nowVal = 1;
     var minVal = 1;
-    var maxVal = 30;
+    var maxVal = 10;
     var tfVal = document.querySelector(".tf_val");
-    var plus = document.querySelector(".plus");
-    var minus = document.querySelector(".minus");
+    var plus = document.querySelector(".btn_plus");
+    var minus = document.querySelector(".btn_minus");
     tfVal.value = nowVal;
 
     // 증가
@@ -15,6 +15,7 @@
             nowVal++;
             tfVal.value = nowVal;
         }
+        nowVal == maxVal ? this.disabled = true : minus.disabled = false;
     }
 
     // 감소
@@ -23,6 +24,7 @@
             nowVal--;
             tfVal.value = nowVal;
         }
+        nowVal == minVal ? this.disabled = true : plus.disabled = false;
     }
 
     // 숫자체크
