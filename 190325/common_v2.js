@@ -7,6 +7,9 @@
     var tfVal = document.querySelector(".tf_val");
     var plus = document.querySelector(".btn_plus");
     var minus = document.querySelector(".btn_minus");
+
+    document.querySelector(".txt_min").innerHTML = "최소 " + minVal;
+    document.querySelector(".txt_max").innerHTML = "최대 " + maxVal;
     tfVal.value = nowVal;
 
     // 증가
