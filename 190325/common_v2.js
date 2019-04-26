@@ -36,6 +36,11 @@
         if(key === 8) return;   // back키 버튼 : 함수 빠져나감
         if(key >= 48 && key <= 57){ // 숫자키 버튼
             nowVal = Number(this.value);
+            if(nowVal > maxVal){
+                alert("최대 숫자값을 확인해주세요.");
+            }else if(nowVal < minVal){
+                alert("최소 숫자값을 확인해주세요.");
+            }
         }else{
             alert("숫자로 넣어주세요.");
         }
