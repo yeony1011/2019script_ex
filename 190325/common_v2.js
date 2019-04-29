@@ -45,6 +45,7 @@
             }
         }else{
             alert("숫자로 넣어주세요.");
+            this.value = 1;
         }
     }
 
