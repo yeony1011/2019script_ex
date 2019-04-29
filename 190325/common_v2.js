@@ -39,9 +39,13 @@
             if(Number(this.value) > maxVal){
                 alert("최대 숫자값을 확인해주세요.");
                 this.value = 1;
+                nowVal = 1;
+                plus.disabled = false;
             }else if(Number(this.value) < minVal){
                 alert("최소 숫자값을 확인해주세요.");
                 this.value = 1;
+                nowVal = 1;
+                minus.disabled = false;
             }
         }else{
             alert("숫자로 넣어주세요.");
