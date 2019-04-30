@@ -46,6 +46,12 @@
                 this.value = 1;
                 plus.disabled = false;
                 minus.disabled = true;
+            }else if(Number(this.value) == maxVal) {
+                plus.disabled = true;
+                minus.disabled = false;
+            }else{
+                plus.disabled = false;
+                minus.disabled = false;
             }
             nowVal = Number(this.value);
         }else{
