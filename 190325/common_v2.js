@@ -36,20 +36,18 @@
         var key = e.keyCode || e.which; // 모든 브라우저에서 작동할 수 있음
         if(key === 8) return;   // back키 버튼 : 함수 빠져나감
         if(key >= 48 && key <= 57 || key >= 96 && key <= 105){ // 숫자키 버튼
-            //nowVal = Number(this.value);
             if(Number(this.value) > maxVal){
                 alert("최대 숫자값을 확인해주세요.");
                 this.value = 1;
-                nowVal = 1;
                 plus.disabled = false;
                 minus.disabled = true;
             }else if(Number(this.value) < minVal){
                 alert("최소 숫자값을 확인해주세요.");
                 this.value = 1;
-                nowVal = 1;
                 plus.disabled = false;
                 minus.disabled = true;
             }
+            nowVal = Number(this.value);
         }else{
             alert("숫자로 넣어주세요.");
             this.value = 1;
