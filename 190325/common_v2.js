@@ -11,6 +11,7 @@
     document.querySelector(".txt_min").innerHTML = "최소 " + minVal;
     document.querySelector(".txt_max").innerHTML = "최대 " + maxVal;
     tfVal.value = nowVal;
+    minus.disabled = true;
 
     // 증가
     function increase(){
@@ -46,8 +47,8 @@
                 alert("최소 숫자값을 확인해주세요.");
                 this.value = 1;
                 nowVal = 1;
-                plus.disabled = true;
-                minus.disabled = false;
+                plus.disabled = false;
+                minus.disabled = true;
             }
         }else{
             alert("숫자로 넣어주세요.");
