@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>실습2 : modal popup</title>
+    <style>
+        .btn_open{padding:10px;color:#fff;background-color:#333}
+        .sample_layer{display:none}
+        .sample_layer:before{display:block;position:fixed;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,0.6);content:""}
+        .inner_sample_layer{position:fixed;top:50%;left:20px;right:20px;max-width:640px;margin:0 auto;padding:10px;border:1px solid #000;transform:translateY(-50%);background-color:#fff}
+        .inner_sample_layer .layer_head{padding-bottom:5px;border-bottom:1px solid #000}
+        .inner_sample_layer .layer_body{padding:25px 0;border-bottom:1px solid #000}
+        .inner_sample_layer .layer_foot{overflow:hidden;padding-top:10px;}
+        .sample_layer.on{display:block}
+        .btn_close{float:right;padding:10px;color:#fff;background-color:#333}
+    </style>
+</head>
+<body>
+<button type="button" class="btn_open">열기</button>
+<div class="sample_layer">
+    <div class="inner_sample_layer">
+        <div class="layer_head">팝업 타이틀</div>
+        <div class="layer_body">팝업 컨텐츠</div>
+        <div class="layer_foot">
+            <button type="button" class="btn_close">닫기</button>
+        </div>
+    </div>
+</div>
+<script src="common.js"></script>
+</body>
+</html>
