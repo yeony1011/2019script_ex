@@ -1,7 +1,7 @@
 # modal(layer popup) 기능
 
 ## 자바스크립트
-- [결과화면 보기](https://yeony1011.github.io/2019script_ex/190325/190325_v2.html)
+- [결과화면 보기](https://yeony1011.github.io/2019script_ex/modal/modal.html)
 - [해당 소스 보기](https://github.com/yeony1011/2019script_ex/blob/master/modal/common.js)
 
 ## 기능
