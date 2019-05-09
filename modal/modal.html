@@ -6,23 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>실습2 : modal popup</title>
     <style>
+        .cont_modal{text-align:center}
         .btn_open{padding:10px;color:#fff;background-color:#333}
         .dimmed_layer{display:none;position:fixed;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,0.65);content:""}
-        .sample_layer{display:none;position:relative;z-index:1}
-        .inner_sample_layer{position:fixed;top:50%;left:20px;right:20px;max-width:640px;margin:0 auto;padding:10px;border:1px solid #000;background-color:#fff;transform:translateY(-50%)}
+        .sample_layer{position:relative;z-index:1;opacity:0;transition:all .3s cubic-bezier(0.25, 0.8, 0.25, 1)}
+        .inner_sample_layer{position:fixed;top:50%;left:20px;right:20px;max-width:640px;margin:0 auto;padding:10px;border:1px solid #000;background-color:#fff;transform:translateY(-50%) scale(0.7);transition:all .3s cubic-bezier(0.25, 0.8, 0.25, 1)}
         .inner_sample_layer .layer_head{padding-bottom:5px;border-bottom:1px solid #000}
-        .inner_sample_layer .layer_body{padding:25px 0;border-bottom:1px solid #000}
-        .inner_sample_layer .layer_foot{overflow:hidden;padding-top:10px;}
-        .dimmed_layer.on, .sample_layer.on{display:block}
+        .inner_sample_layer .layer_body{overflow-y:auto;max-height:350px;border-bottom:1px solid #000}
+        .layer_body .group_samplecont{padding:25px 0}
+        .inner_sample_layer .layer_foot{overflow:hidden;padding-top:10px}
+        .modal_on{overflow:hidden}
+        .modal_on .dimmed_layer{display:block}
+        .modal_on .sample_layer{opacity:1}
+        .modal_on .sample_layer .inner_sample_layer{transform:translateY(-50%) scale(1)}
         .btn_close{float:right;padding:10px;color:#fff;background-color:#333}
     </style>
 </head>
 <body>
-<button type="button" class="btn_open">열기</button>
+<article class="cont_modal">
+    <h1>modal content</h1>
+    <button type="button" class="btn_open">열기</button>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+</article>
 <div class="sample_layer">
     <div class="inner_sample_layer">
         <div class="layer_head">팝업 타이틀</div>
-        <div class="layer_body">팝업 컨텐츠</div>
+        <div class="layer_body">
+            <div class="group_samplecont">
+                팝업 컨텐츠<br>팝업 컨텐츠<br>팝업 컨텐츠<br>팝업 컨텐츠<br>
+                팝업 컨텐츠<br>팝업 컨텐츠<br>팝업 컨텐츠<br>팝업 컨텐츠<br>
+                팝업 컨텐츠<br>팝업 컨텐츠<br>팝업 컨텐츠<br>팝업 컨텐츠<br>
+                팝업 컨텐츠<br>팝업 컨텐츠<br>팝업 컨텐츠<br>팝업 컨텐츠<br>
+                팝업 컨텐츠<br>팝업 컨텐츠<br>팝업 컨텐츠<br>팝업 컨텐츠
+            </div>
+        </div>
         <div class="layer_foot">
             <button type="button" class="btn_close">닫기</button>
         </div>
