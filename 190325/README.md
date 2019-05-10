@@ -14,3 +14,6 @@
 - [x] input창에 사용자입력 기능
 - [x] min/max값 입력을 추가하여 제어
 - [x] min/max값에 따라 -, + 버튼 disabled 처리
+
+## 결과참조
+https://element.eleme.io/#/en-US/component/input-number

@@ -11,3 +11,6 @@
 - [x] 레이어팝업 열였을때, body의 스크롤 제어
 - [x] 레이어팝업 이외의 다른곳(dimmed)을 클릭시, 닫힘
 - [x] 레이어팝업의 max-height 추가, max-height보다 내용길 때 스크롤 발생
+
+## 결과참조
+https://vuetifyjs.com/ko/components/dialogs
