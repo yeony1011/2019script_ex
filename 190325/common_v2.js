@@ -19,7 +19,7 @@
             nowVal++;
             tfVal.value = nowVal;
         }
-        nowVal == maxVal ? this.disabled = true : minus.disabled = false;
+        numValiChk();
     }
 
     // 감소
@@ -28,7 +28,31 @@
             nowVal--;
             tfVal.value = nowVal;
         }
-        nowVal == minVal ? this.disabled = true : plus.disabled = false;
+        numValiChk();
+    }
+
+    //숫자유효성체크
+    function numValiChk(){
+        if(Number(tfVal.value) > maxVal){
+            alert("최대 숫자값을 확인해주세요.");
+            tfVal.value = 1;
+            plus.disabled = false;
+            minus.disabled = true;
+        }else if(Number(tfVal.value) < minVal){
+            alert("최소 숫자값을 확인해주세요.");
+            tfVal.value = 1;
+            plus.disabled = false;
+            minus.disabled = true;
+        }else if(Number(tfVal.value) == maxVal) {
+            plus.disabled = true;
+            minus.disabled = false;
+        }else if(Number(tfVal.value) == minVal) {
+            plus.disabled = false;
+            minus.disabled = true;
+        }else{
+            plus.disabled = false;
+            minus.disabled = false;
+        }
     }
 
     // 숫자체크
@@ -36,23 +60,7 @@
         var key = e.keyCode || e.which; // 모든 브라우저에서 작동할 수 있음
         if(key === 8) return;   // back키 버튼 : 함수 빠져나감
         if(key >= 48 && key <= 57 || key >= 96 && key <= 105){ // 숫자키 버튼
-            if(Number(this.value) > maxVal){
-                alert("최대 숫자값을 확인해주세요.");
-                this.value = 1;
-                plus.disabled = false;
-                minus.disabled = true;
-            }else if(Number(this.value) < minVal){
-                alert("최소 숫자값을 확인해주세요.");
-                this.value = 1;
-                plus.disabled = false;
-                minus.disabled = true;
-            }else if(Number(this.value) == maxVal) {
-                plus.disabled = true;
-                minus.disabled = false;
-            }else{
-                plus.disabled = false;
-                minus.disabled = false;
-            }
+            numValiChk();
             nowVal = Number(this.value);
         }else{
             alert("숫자로 넣어주세요.");
