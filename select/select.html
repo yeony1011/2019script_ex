@@ -5,8 +5,27 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>실습3 : 디자인된 셀렉트박스</title>
-    <link rel="stylesheet" href="http://html.ftdev.daum.net/webs-test-2014/basic/2team/jongha/selectbox_wa/css/reset.css">
     <style>
+        /* reset */
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+        fieldset,img{border:0 none}
+        dl,ul,ol,menu,li {list-style:none}
+        blockquote, q {quotes:none}
+        blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+        input,select,textarea,button {font-size:100%;vertical-align:middle}
+        button {border:0 none;background-color:transparent;cursor:pointer}
+        table {border-collapse:collapse;border-spacing:0}
+        body{-webkit-text-size-adjust:none} input[type='text'],input[type='password'],input[type='submit'],input[type='search'] {-webkit-appearance:none; border-radius:0}
+        input:checked[type='checkbox'] {background-color:#666; -webkit-appearance:checkbox}
+        button,html input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button; border-radius:0}
+        body {background-color:#fff}
+        body,th,td,input,select,textarea,button {font-size:15px;line-height:1.5;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;color:#333}
+        a {color:#333;text-decoration:none} a:active, a:hover {text-decoration:none}
+        address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+
+        /* common */
+        .screen_out {display:block;overflow:hidden;position:absolute;left:-9999px;width:1px;height:1px;font-size:0;line-height:0;text-indent:-9999px}
+
         .ico_comm {background:url(//i1.daumcdn.net/cfs.tistory/static/top/ico_tistory_140829.png) no-repeat;vertical-align:top}
         .opt_comm {width:108px;height:37px;margin:50px auto 0;padding:21px 19px 0 0;border:1px solid #6a7076;background-color:#6a7076}
         .opt_comm .link_selected {display:block;padding-left:28px;font-size:15px;line-height:19px;color:#fff;background-position:100% -1218px;letter-spacing:-1px}
