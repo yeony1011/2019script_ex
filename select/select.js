@@ -3,6 +3,9 @@
 (function(){
     var regionSelect = document.querySelector(".opt_comm");
     var selectedRegion = document.querySelector(".btn_selected");   //querySelector, getElementById : dom list 출력
+    var txtChoice = document.querySelector(".txt_choice");
+    var valRegion = document.querySelector("#valRegion");
+    var regionList = document.querySelectorAll(".list_opt li");
     var nowRegion = document.querySelectorAll(".link_option");      //querySelectorAll : node list 출력
 
     /*
@@ -17,15 +20,17 @@
     //셀렉트박스 닫기
     Array.from(nowRegion).forEach(el => {
         el.addEventListener("click", function(){
-            console.log(this);
+            //console.log(this);
             var seleVal = this.innerHTML;
-            document.querySelector(".txt_choice").innerHTML = seleVal;
-            document.querySelector(".val_region").value = seleVal;
+            txtChoice.innerHTML = seleVal;
+            valRegion.value = seleVal;
     
-            this.parentNode.classList.add("on");
-            regionSelect.classList.remove("opt_open");
             
-            alert("선택된 지역 : "+seleVal);
+            console.log(regionList.classList);
+            regionSelect.classList.remove("opt_open");
+            this.parentNode.classList.add("on");
+            
+            //alert("선택된 지역 : "+valRegion.value);
         })
     })
 })();
