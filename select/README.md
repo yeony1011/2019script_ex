@@ -15,8 +15,8 @@ https://material-ui.com/components/selects/
 
 ## 배열과 유사배열
 - 배열과 유사배열의 차이점 : 유사배열에서는 배열의 메서드 사용X   
-=> 배열의 메서드를 사용하기 위해 call, apply 사용   
-=> 최신 자바스크립트에서는 Array.from으로 사용
+    - 배열의 메서드를 사용하기 위해 call, apply 사용   
+    - 최신 자바스크립트에서는 Array.from으로 사용
 
 - 배열 판별 방법 : Array.isArray()
 
