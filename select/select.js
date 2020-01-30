@@ -8,10 +8,6 @@
     var regionList = document.querySelectorAll(".list_opt li");
     var nowRegion = document.querySelectorAll(".link_option");      //querySelectorAll : node list 출력
 
-    /*
-    querySelectorAll : 유사배열
-    */
-
     //셀렉트박스 열기
     selectedRegion.addEventListener("click", function(){
         regionSelect.classList.add("opt_open");
@@ -25,8 +21,12 @@
             txtChoice.innerHTML = seleVal;
             valRegion.value = seleVal;
     
+            //console.log(regionList);
+            Array.from(regionList).forEach(function(el) {
+                console.log(el);
+                el.classList.remove("on");
+            })
             
-            console.log(regionList.classList);
             regionSelect.classList.remove("opt_open");
             this.parentNode.classList.add("on");
             
