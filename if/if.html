@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>실습4 : IF 조건문</title>
+</head>
+<body>
+    <h1>IF 조건문</h1>
+    <div>
+        <h2>1. 입력받은 숫자가 홀수인지 짝수인지 알려주는 프로그램 작성</h2>
+        <script>
+            var number = Number(prompt("숫자를 입력해주세요."));
+            if((number % 2) == 0){
+                alert(number + " : 짝수입니다.");
+            }else{
+                alert(number + " : 홀수입니다.");
+            }
+        </script>
+    </div>
+    <div>
+        <h2>2. 입력받은 영문자가 대문자로 되어 있으면 '대문자 문장입니다.', 소문자로 되어 있으면 '소문자 문장입니다.', 그 외에는 '보통 문장입니다.' 라고 출력하는 프로그램 작성</h2>
+        <script>
+            var string = prompt("영문자를 입력해주세요.");
+            var ustring = string.toUpperCase();
+            var lstring = string.toLowerCase();
+
+            if(string == ustring){
+                alert(string + " : 대문자 입니다.");
+            }else if(string == lstring){
+                alert(string + " : 소문자 입니다.");
+            }else{
+                alert(string + " : 보통 문자 입니다.");
+            }
+        </script>
+    </div>
+</body>
+</html>
