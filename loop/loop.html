@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>실습5 : loop</title>
+</head>
+<body>
+    <h1>loop</h1>
+    <div>
+        <h2>1. while문, for문을 사용해서 1에서 100까지의 합</h2>
+        <script>
+            // while문
+            // var i = 0;
+            // var sum = 0;
+            // while (i <= 100){
+            //     console.log(sum = sum + i);
+            //     i++;
+            // }
+            // document.write("1부터 100까지의 합은" + sum + "입니다");
+
+            // for문
+            var sum = 0;
+            for(var i = 0; i <= 100; i++){
+                sum = sum + i;
+                //console.log(sum);
+            }
+            document.write("1부터 100까지의 합은" + sum + "입니다");
+        </script>
+    </div>
+    <div>
+        <h2>2. 사용자가 입력한 수들의 갯수와 합을 구하는 프로그램 작성(0 입력시 종료)</h2>
+        <button type="button" class="btn_start">시작하기</button>
+        <p class="txt_tot"></p>
+        <script>
+            var numStart = document.querySelector(".btn_start");
+            var txtTot = document.querySelector(".txt_tot");
+            numStart.addEventListener("click", function(){
+                var sum = 0;
+                var num;
+                var count = -1;
+                while(num != 0){
+                    num = Number(prompt("숫자를 입력해 주세요. 단, 0인경우 종료"));
+                    sum = sum + num;
+                    count++;
+                }
+                txtTot.innerHTML = "입력한" + count + "개의 수의 합은" + sum + "입니다.";
+            });
+        </script>
+    </div>
+    <div>
+        <h2>3. 1 ~ 100까지 짝수의 합</h2>
+        <script>
+            var tot = 0;
+            for(var n = 1; n <= 100; n++){
+                if(n%2 == 0){
+                    tot = tot + n;
+                }
+            }
+            document.write("1부터 100까지 짝수의 합은" + tot +"입니다");
+        </script>
+    </div>
+    <div>
+        <h2>4. 100, 99, 98, ..., 0까지 출력하는 프로그램 작성</h2>
+        <p>콘솔로 출력</p>
+        <script>
+            for(var j = 100; j >= 0; j--){
+                console.log(j);
+            }
+        </script>
+    </div>
+    <div>
+        <h2>5. 구구단 2단 반복문으로 출력하기</h2>
+        <p>콘솔로 출력</p>
+        <script>
+            for(var dan = 1; dan <= 9; dan++){
+                console.log("2 * " + dan + " = " + 2 * dan);
+            }
+        </script>
+    </div>
+    <div>
+        <h2>6. 소수 판별 프로그램</h2>
+        <button type="button" class="btn_start2">시작하기</button>
+        <p class="txt_result"></p>
+        <script>
+            var numStart2 = document.querySelector(".btn_start2");
+            var txtResult = document.querySelector(".txt_result");
+            var isPrime = true;
+            numStart2.addEventListener("click", function(){
+                var primeNum = Number(prompt("2이상의 숫자를 입력하세요"));
+                for(var t = 2; t < primeNum; t++){
+                    if(primeNum % t === 0){
+                        //txtResult.innerHTML = primeNum + "숫자는 소수가 아닙니다";
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if(isPrime){
+                    txtResult.innerHTML = primeNum + "숫자는 소수입니다";
+                }else{
+                    txtResult.innerHTML = primeNum + "숫자는 소수가 아닙니다";
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
