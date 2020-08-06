@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOS Library</title>
+    <style>
+        .wrap_content{width:1000px;margin:0 auto}
+        .area{overflow:hidden;padding:100px 0}
+        .box{width:200px;height:100px;border:3px solid #999}
+        .area:nth-child(1) .box{float:left}
+        .area:nth-child(2) .box{margin:0 auto}
+        .area:nth-child(3) .box{float:right}
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <div class="wrap_content">
+        <div class="area" data-aos="slide-up"><div class="box">1</div></div>
+        <div class="area" data-aos="slide-down"><div class="box">2</div></div>
+        <div class="area" data-aos="fade-left"><div class="box">3</div></div>
+    </div>
+    <script>
+        (function(){
+            AOS.init();
+        })();
+    </script>
+</body>
+</html>
