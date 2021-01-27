@@ -1,8 +1,8 @@
 # Table of contents
 
 * [FREEFORM PROJECT](README.md)
-* [particles](particles.md)
-* [AOS Library](library.md)
+* [particles Library](particles.md)
+* [AOS Library](aos.md)
 * [디자인된 셀렉트박스 기능](select.md)
 * [IF 조건문](if.md)
 * [loop 반복문](loop.md)
