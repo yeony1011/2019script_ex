@@ -1,7 +1,7 @@
 # Table of contents
 
 * [FREEFORM PROJECT](README.md)
-* [particles](particles.md)
+* [particles Library](library-1.md)
 * [AOS Library](library.md)
 * [디자인된 셀렉트박스 기능](select.md)
 * [IF 조건문](if.md)
