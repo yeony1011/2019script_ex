@@ -11,5 +11,5 @@
 
 ## Learning JavaScript
 
-* [CHAPTER1](learning-javascript/learning-chapter1.md)
+* [CHAPTER1  첫 번째 애플리케이션](learning-javascript/learning-chapter1.md)
 
