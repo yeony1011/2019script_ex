@@ -12,5 +12,5 @@
 ## Learning JavaScript
 
 * [CHAPTER1  첫 번째 애플리케이션](learning-javascript/learning-chapter1.md)
-* [CHAPTER2 자바스크립트 개발 도구](learning-javascript/undefined.md)
+* [CHAPTER2 자바스크립트 개발 도구](learning-javascript/learning-chapter2.md)
 
