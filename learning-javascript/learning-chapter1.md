@@ -8,7 +8,7 @@
 
 ## 제이쿼리
 
-```text
+```
 $(document).ready(function(){   // 제이쿼리 v3.xx 부터 사라짐
     'use strict';               // 자바스크립트 인터프리터에서 코드를 더 엄격하게 처리
 });
