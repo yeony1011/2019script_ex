@@ -8,7 +8,7 @@
 브라우저 밖에서 자바스크립트를 실행할 수 있게 하는 도구\
 노드와 함께 설치되는 npm은 이 리스트의 다른 도구를 설치할 때 필요
 ### Gulp
-반복적인 개발 작업을 자동화하는 빌드 도구 (≒ Gulp)
+반복적인 개발 작업을 자동화하는 빌드 도구 (≒ Grunt)
 ### Babel
 ES6 코드를 ES5 코드로 변환하는 트랜스컴파일러
 ### ESLint
@@ -25,16 +25,16 @@ ex) Chrome, Firefox 등
 - 홈 디렉토리 : ~
 
 ```
-$ ls            // 목록보기
-$ cd ~          // 다른 디렉토리로 이동
-$ pwd           // 현재 디렉토리 경로 출력
-$ mkdir test    // 현재 디렉토리에서 서브디렉토리(test) 생성
-$ cd test       // 새로만든 디렉토리로(하위 디렉토리) 이동
-$ cd ..         // 상위 디렉토리로 이동
+$ ls            # 목록보기
+$ cd ~          # 다른 디렉토리로 이동
+$ pwd           # 현재 디렉토리 경로 출력
+$ mkdir test    # 현재 디렉토리에서 서브디렉토리(test) 생성
+$ cd test       # 새로만든 디렉토리로(하위 디렉토리) 이동
+$ cd ..         # 상위 디렉토리로 이동
 ```
 
 ## Git .gitignore
-: git 추적 제외 파일
+git 추적 제외 파일
 ```
 # npm 디버그 기록
 npm-debug.log*
@@ -48,3 +48,19 @@ node_modules
 # 임시 파일
 *.tmp
 ```
+
+## npm 패키지 관리
+### 의존성
+- 일반의존성
+- 개발의존성 : 앱을 실행할 때는 필요없지만, 프로젝트를 개발할 때 필요 or 도움되는 패키지
+### 플래그
+- --save, --save-dev
+```
+$ npm init  # package.json 생성 (package.json으로 의존성 관리)
+
+```
+
+## 실습코드
+
+* [package.js](https://github.com/yeony1011/2019script_ex/blob/master/package.js)
+* [gulpfile.js](https://github.com/yeony1011/2019script_ex/blob/master/gulpfile.js)
