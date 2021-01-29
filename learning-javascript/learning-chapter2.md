@@ -59,11 +59,26 @@ node_modules
 - 플래그 없어도 로컬패키지에 설치 가능하지만, package.json에 등록되지 않음
 
 ```
-$ npm init  # package.json 생성 (package.json으로 의존성 관리)
+$ npm init                          # package.json 생성 (package.json으로 의존성 관리)
+$ npm install --save underscore     # underscore --save 플래그로 설치
+```
 
+## 빌드도구 : gulp
+개발 과정에서 반복작업을 자동화하는 도구
+```
+$ npm install -g gulp               # 전역으로 gulp 설치
+$ gulp                              # gulpfile.js 실행하기
+```
+
+## 트랜스컴파일러 : babel
+.babelrc : 프로젝트에서 바벨을 사용할때 es6를 사용한다는 것을 인식
+```
+$ npm install --save-dev gulp babel-core babel-preset-es2015 gulp-babel@7
 ```
 
 ## 실습코드
 
 * [package.json](https://github.com/yeony1011/2019script_ex/blob/master/package.json)
 * [gulpfile.js](https://github.com/yeony1011/2019script_ex/blob/master/gulpfile.js)
+* [.babelrc](https://github.com/yeony1011/2019script_ex/blob/master/.babelrc)
+* [es6/test.js](https://github.com/yeony1011/2019script_ex/blob/master/es6/test.js)
