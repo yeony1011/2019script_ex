@@ -15,8 +15,8 @@ ES6 코드를 ES5 코드로 변환하는 트랜스컴파일러
 자주하는 실수를 피하고 더 나은 프로그래머가 되도록 돕는 린트 프로그램
 
 ## Evergreen Browser
-- 자동적으로 브라우저가 사용자에 대한 별도의 재설치를 요구하지 않고 업데이트가 가능한 브라우저\
-- 초기 웹브라우저들은 Evergreen방식을 사용하지 않으나, Web 기술의 발전에 따라 사용자의 편의성과 업데이트를 위해 설계\
+- 자동적으로 브라우저가 사용자에 대한 별도의 재설치를 요구하지 않고 업데이트가 가능한 브라우저
+- 초기 웹브라우저들은 Evergreen방식을 사용하지 않으나, Web 기술의 발전에 따라 사용자의 편의성과 업데이트를 위해 설계
 - 에버그린 브라우저에서 자바스크립트 최신기술을 사용가능 하지만, 모두 지원하지는 않으므로 트랜스컴파일러 사용\
 ex) Chrome, Firefox 등
 
@@ -55,6 +55,8 @@ node_modules
 - 개발의존성 : 앱을 실행할 때는 필요없지만, 프로젝트를 개발할 때 필요 or 도움되는 패키지
 ### 플래그
 - --save, --save-dev
+- 플래그 없어도 로컬패키지에 설치 가능하지만, package.json에 등록되지 않음
+
 ```
 $ npm init  # package.json 생성 (package.json으로 의존성 관리)
 
@@ -62,5 +64,5 @@ $ npm init  # package.json 생성 (package.json으로 의존성 관리)
 
 ## 실습코드
 
-* [package.js](https://github.com/yeony1011/2019script_ex/blob/master/package.js)
+* [package.json](https://github.com/yeony1011/2019script_ex/blob/master/package.json)
 * [gulpfile.js](https://github.com/yeony1011/2019script_ex/blob/master/gulpfile.js)
