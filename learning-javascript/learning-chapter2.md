@@ -76,9 +76,16 @@ $ gulp                              # gulpfile.js 실행하기
 $ npm install --save-dev gulp babel-core babel-preset-es2015 gulp-babel@7
 ```
 
+## Lint
+코드검토
+```
+$ npm install -g eslint # eslint 전역 설치
+$ eslint --init         # .eslintrc 파일 생성 및 lint 규칙 설정
+```
 ## 실습코드
 
 * [package.json](https://github.com/yeony1011/2019script_ex/blob/master/package.json)
 * [gulpfile.js](https://github.com/yeony1011/2019script_ex/blob/master/gulpfile.js)
 * [.babelrc](https://github.com/yeony1011/2019script_ex/blob/master/.babelrc)
 * [es6/test.js](https://github.com/yeony1011/2019script_ex/blob/master/es6/test.js)
+* [.eslintrc.js](https://github.com/yeony1011/2019script_ex/blob/master/.eslintrc.js)
