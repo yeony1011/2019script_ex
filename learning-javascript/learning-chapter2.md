@@ -3,28 +3,39 @@
 ## 자바스크립트 개발 도구
 
 ### Git
+
 프로젝트가 커져도 쉽게 관리할 수 있고, 다른 개발자와 협력할 수 있게 돕는 버전 컨트롤 도구
+
 ### Node
-브라우저 밖에서 자바스크립트를 실행할 수 있게 하는 도구\
-노드와 함께 설치되는 npm은 이 리스트의 다른 도구를 설치할 때 필요
+
+브라우저 밖에서 자바스크립트를 실행할 수 있게 하는 도구 노드와 함께 설치되는 npm은 이 리스트의 다른 도구를 설치할 때 필요
+
 ### Gulp
-반복적인 개발 작업을 자동화하는 빌드 도구 (≒ Grunt)
+
+반복적인 개발 작업을 자동화하는 빌드 도구 \(≒ Grunt\)
+
 ### Babel
+
 ES6 코드를 ES5 코드로 변환하는 트랜스컴파일러
+
 ### ESLint
+
 자주하는 실수를 피하고 더 나은 프로그래머가 되도록 돕는 린트 프로그램
 
 ## Evergreen Browser
-- 자동적으로 브라우저가 사용자에 대한 별도의 재설치를 요구하지 않고 업데이트가 가능한 브라우저
-- 초기 웹브라우저들은 Evergreen방식을 사용하지 않으나, Web 기술의 발전에 따라 사용자의 편의성과 업데이트를 위해 설계
-- 에버그린 브라우저에서 자바스크립트 최신기술을 사용가능 하지만, 모두 지원하지는 않으므로 트랜스컴파일러 사용\
-ex) Chrome, Firefox 등
+
+* 자동적으로 브라우저가 사용자에 대한 별도의 재설치를 요구하지 않고 업데이트가 가능한 브라우저
+* 초기 웹브라우저들은 Evergreen방식을 사용하지 않으나, Web 기술의 발전에 따라 사용자의 편의성과 업데이트를 위해 설계
+* 에버그린 브라우저에서 자바스크립트 최신기술을 사용가능 하지만, 모두 지원하지는 않으므로 트랜스컴파일러 사용\
+
+  ex\) Chrome, Firefox 등
 
 ## 터미널
-- 디렉토리 구분 : /(슬래시)
-- 홈 디렉토리 : ~
 
-```
+* 디렉토리 구분 : /\(슬래시\)
+* 홈 디렉토리 : ~
+
+```text
 $ ls            # 목록보기
 $ cd ~          # 다른 디렉토리로 이동
 $ pwd           # 현재 디렉토리 경로 출력
@@ -34,8 +45,10 @@ $ cd ..         # 상위 디렉토리로 이동
 ```
 
 ## Git .gitignore
+
 git 추적 제외 파일
-```
+
+```text
 # npm 디버그 기록
 npm-debug.log*
 
@@ -50,38 +63,48 @@ node_modules
 ```
 
 ## npm 패키지 관리
+
 ### 의존성
-- 일반의존성
-- 개발의존성 : 앱을 실행할 때는 필요없지만, 프로젝트를 개발할 때 필요 or 도움되는 패키지
+
+* 일반의존성
+* 개발의존성 : 앱을 실행할 때는 필요없지만, 프로젝트를 개발할 때 필요 or 도움되는 패키지
 
 ### 플래그
-- --save, --save-dev
-- 플래그 없어도 로컬패키지에 설치 가능하지만, package.json에 등록되지 않음
 
-```
+* --save, --save-dev
+* 플래그 없어도 로컬패키지에 설치 가능하지만, package.json에 등록되지 않음
+
+```text
 $ npm init                          # package.json 생성 (package.json으로 의존성 관리)
 $ npm install --save underscore     # underscore --save 플래그로 설치
 ```
 
 ## 빌드도구 : gulp
+
 개발 과정에서 반복작업을 자동화하는 도구
-```
+
+```text
 $ npm install -g gulp               # 전역으로 gulp 설치
 $ gulp                              # gulpfile.js 실행하기
 ```
 
 ## 트랜스컴파일러 : babel
+
 .babelrc : 프로젝트에서 바벨을 사용할때 es6를 사용한다는 것을 인식
-```
+
+```text
 $ npm install --save-dev gulp babel-core babel-preset-es2015 gulp-babel@7
 ```
 
 ## Lint
+
 코드검토
-```
+
+```text
 $ npm install -g eslint # eslint 전역 설치
 $ eslint --init         # .eslintrc 파일 생성 및 lint 규칙 설정
 ```
+
 ## 실습코드
 
 * [package.json](https://github.com/yeony1011/2019script_ex/blob/master/package.json)
@@ -89,3 +112,4 @@ $ eslint --init         # .eslintrc 파일 생성 및 lint 규칙 설정
 * [.babelrc](https://github.com/yeony1011/2019script_ex/blob/master/.babelrc)
 * [es6/test.js](https://github.com/yeony1011/2019script_ex/blob/master/es6/test.js)
 * [.eslintrc.js](https://github.com/yeony1011/2019script_ex/blob/master/.eslintrc.js)
+
