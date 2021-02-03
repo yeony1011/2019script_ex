@@ -260,10 +260,8 @@ arr[0] = 3;                         // arr은 [3, 'b', 'c']
 - 현재 날짜와 시간을 나타내는 객체를 만들때 new Date() 사용
 ```
 const now = new Date();
-now();                                                  // 현재 날짜와 시간을 불러옴
-
-const halloween = new Date(2021, 9, 31);                // 월은 0부터 시작이므로 2021-10-31
-
+now();                                                  // 현재 날짜와 시간을 불러옴  
+const halloween = new Date(2021, 9, 31);                // 월은 0부터 시작이므로 2021-10-31  
 const halloweenParty = new Date(2021, 9, 31, 19, 0);    // 19:00 = 7:00 pm
 halloweenParty.getFullYear();                           // 2021
 halloweenParty.getMonth();                              // 9
