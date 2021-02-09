@@ -15,4 +15,5 @@
 * [CHAPTER2 자바스크립트 개발 도구](learning-javascript/learning-chapter2.md)
 * [CHAPTER3 리터럴과 변수, 상수, 데이터 타입](learning-javascript/learning-chapter3.md)
 * [CHAPTER4 제어문](learning-javascript/learning-chapter4.md)
+* [CHAPTER5 표현식과 연산자](learning-javascript/learning-chapter5.md)
 
