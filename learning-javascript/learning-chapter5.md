@@ -88,10 +88,8 @@ const result = doIt && x++;   // result에 0 저장, x의 증가연산자 실행
 // 객체 선언과 할당을 같은 문에서 실행할 경우
 // 객체 선언
 const obj = {b:2, c:3, d:4};
-
 // 객체 해체
 const {a,b,c} = obj;
-
 a;  // undefined        // obj에는 "a"프로퍼티 존재X
 b;  // 2
 c;  // 3
@@ -102,7 +100,6 @@ d;  // ReferenceError   // "d"는 정의되지 않음
 // 객체 선언
 const obj = {b:2, c:3, d:4};
 let a, b, c;
-
 // 객체 해체
 {a,b,c} = obj;          // Error
 ({a,b,c} = obj);        // Success
@@ -112,7 +109,6 @@ let a, b, c;
 ```
 // 배열 선언
 const arr = [1, 2, 3];
-
 // 배열 해체 할당
 let [x, y] = arr;
 x;  // 1
