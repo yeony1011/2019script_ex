@@ -16,4 +16,5 @@
 * [CHAPTER3 리터럴과 변수, 상수, 데이터 타입](learning-javascript/learning-chapter3.md)
 * [CHAPTER4 제어문](learning-javascript/learning-chapter4.md)
 * [CHAPTER5 표현식과 연산자](learning-javascript/learning-chapter5.md)
+* [CHAPTER6 함수](learning-javascript/learning-chapter6.md)
 
