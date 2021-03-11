@@ -152,3 +152,18 @@ f(5);           // 5 - defualt - 3
 f();            // undefined - defualt - 3
 ```
 
+## 객체의 프로퍼티인 함수
+```
+const o = {
+    name: 'Wallace',                        // 원시값 프로퍼티
+    bark: function(){ return 'Woof!';},     // 함수 프로퍼티(메서드)
+}
+```
+```
+// ES6에서 간편하게 메서드 추가할 수 있는 문법
+const o = {
+    name: 'Wallace',                        // 원시값 프로퍼티
+    bark(){ return 'Woof!'; },              // 함수 프로퍼티(메서드)
+}
+```
+
