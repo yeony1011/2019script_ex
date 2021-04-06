@@ -167,3 +167,37 @@ const o = {
 }
 ```
 
+## this 키워드
+```
+const o = {
+    name: 'Wallace',
+    speak() {return `My name is ${this.name}!`;},
+}
+o.speak();  // My name is Wallace!
+```
+- this는 어떻게 선언했는지보다 어떻게 호출했는지가 중요
+- this가 o에 묶인 이유는 speak가 o의 프로퍼티X, o에서 speak를 호출했기 때문
+```
+const speak = o.speak;
+speak === o.speak;  //true;
+speak();            // My name is undefined!
+```
+
+- 중첩된 this
+```
+const o = {
+    name : 'Yeony',
+    greetBackwards : function(){
+        const self = this;
+        function getReverseName(){
+            let nameBackwards = '';
+            for(let i = self.name.length-1; i>=0; i--){
+                nameBackwards += self.name[i];
+            }
+            return nameBackwards;
+        }
+        return `${getReverseName()} si eman ym, olleH`;
+    },
+};
+o.greetBackwards();
+```
