@@ -201,3 +201,84 @@ const o = {
 };
 o.greetBackwards();
 ```
+
+## 함수 표현시과 익명 함수
+```
+const f = function(){
+
+}
+const g = function(){
+    if(stop) console.log('f stopped!');
+    f(true);
+};
+g(false);
+```
+
+## 화살표 표기법
+```
+const f1 = function(){return "hello!";}
+// 또는
+const f1 = () => "hello!";
+
+const f2 = function(name){return `hello, ${name}!`;}
+// 또는
+const f2 = name => `hello, ${name}!`;
+
+const f3 = function(a, b){return a + b;}
+// 또는
+const f3 = (a, b)) => a + b;
+```
+```
+const o = {
+    name : 'yeony',
+    greetBackwards: funtion(){
+        const getReverseName = () => {
+            let nameBackwards = '';
+            for(let i = this.name.length-1; i >= 0; i--){
+                nameBackwards += this.name[i];
+            }
+            rerturn `${getReverseName()} si eman ym, olleh`;
+        }
+    },
+};
+o.greetBackwards();
+```
+
+## call과 apply, bind
+```
+const bruce = {name: "Bruce"};
+const madeline = {name: "Madeline"};
+
+// 이 함수는 어떤 객체에도 연결되지 않았지만 this를 사용
+function greet(){
+    return `Hello, I'm ${this.name}!`;
+},
+
+greet();                // Hello, I'm undefined! this는 어디에도 묶이지 않아 undefined
+greet.call(bruce);      // Hello, I'm Bruce!
+greet.call(madeline);   // Hello, I'm Madeline!
+```
+```
+function update(birthYear, occupation){
+    this.birthYear = birthYear;
+    this.occupation = occupation;
+}
+update.call(bruce, 1960, 'singer');
+update.call(madeline, 1962, 'actress');
+update.apply(bruce, [1962, 'actor']);
+```
+```
+const arr = [2, 3, -5, 15, 7];
+Math.min.apply(null, arr); // -5
+Math.max.apply(null, arr); // 15
+```
+```
+const newBuce = [1940, "marrtial artist"];
+Math.min(...arr); // -5
+Math.max(...arr); // 15
+```
+```
+const updateBruce = update.bind(bruce);
+updateBruce(1940, "actor");
+updateBruce.call(madeline, 1274, "king");
+```
