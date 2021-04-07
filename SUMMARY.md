@@ -17,4 +17,5 @@
 * [CHAPTER4 제어문](learning-javascript/learning-chapter4.md)
 * [CHAPTER5 표현식과 연산자](learning-javascript/learning-chapter5.md)
 * [CHAPTER6 함수](learning-javascript/learning-chapter6.md)
+* [CHAPTER7 스코프](learning-javascript/learning-chapter7.md)
 
