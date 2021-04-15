@@ -113,7 +113,7 @@ console.log(typeof x); // undefined
 ```
 let globalFunc;     // 정의되지 않은 전역 함수
 {
-    let blockVar = 'a';     // 블록 스코프에 있는 변수
+    let blockVar = 'a';    // 블록 스코프에 있는 변수
     globalFunc = function(){
         console.log(blockVar);
     }
@@ -121,7 +121,34 @@ let globalFunc;     // 정의되지 않은 전역 함수
 globalFunc();
 ```
 - 스코프 안에서 함수를 정의하면 해당 스코프는 더 오래 유지
-- 접근할 수 없는 것에 접끈할 수 있는 효과
+- 접근할 수 없는 것에 접근할 수 있는 효과
+```
+let f;      // 정의되지 않은 함수
+{
+    let o = {note : 'safe'};
+    f = function(){
+        return o;
+    }
+}
+let oRef = f();
+oRef.note = "Not so safe afterr all!";
 ```
 
+## 즉시 호출하는 함수 표현식
+- IIFE : 함수를 선언학고 즉시 실행
+- 내부에 있는 것들이 모두 자신만의 스코프를 가지지만, IIFE자체는 함수이므로 그 스코프 밖으로 무언가를 내보낼 수 있음
+- ES6에서 블록 스코프 변수를 도입하면서 IIFE 사용이 줄었지만, 클로저를 만들고 클로저에서 무언가 반환할때 아직 유용하게 쓰임
 ```
+(function(){
+    // IIFE
+})();
+```
+```
+const message = (function(){
+    const secret = "I'm a secret!";
+    return `The secret is ${secret.length} charracters long`;
+})();
+console.log(message);
+```
+
+## 함수 스코프와 호이스팅
