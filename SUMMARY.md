@@ -19,3 +19,10 @@
 * [CHAPTER6 함수](learning-javascript/learning-chapter6.md)
 * [CHAPTER7 스코프](learning-javascript/learning-chapter7.md)
 
+## javascript basic
+
+* [basic1-2](javascript-basic/basic1-2.md)
+* [basic3-4](javascript-basic/basic3-4.md)
+* [basic5-6](javascript-basic/basic5-6.md)
+* [class](javascript-basic/class.md)
+
