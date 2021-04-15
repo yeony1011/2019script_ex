@@ -99,7 +99,7 @@ console.log(typeof x); // undefined
         // 내부블록
         let x = 5;
         console.log(x);     // 5
-        console.log(y.colo);    // blue
+        console.log(y.color);    // blue
         y.color = "red";
         console.log(z); // 3
     }
