@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class는 object뽑아내는 역할 //constructor
+        
+        // var nunu = {
+        //     q : 'consume',
+        //     w : 'snowball'
+        // }
+
+        // var garen = {
+        //     q : 'strike',
+        //     w : 'courage'
+        // }
+
+        // ==================
+
+        function 기계(skill1, skill2){
+            thils.q = skill1;
+            thils.w = skill2;
+        }
+
+        // this : 기계로부터 생성되는 object (instance)
+        // 새로생성되는 object(this)의 q에 consume을 추가해주세요
+
+        // new 기계(); // object뽑음. object 자료
+
+        var nunu = new 기계('consume', 'snowball');
+        var garen = new 기계('strike', 'courage');
+
+        // ==================
+
+        class Hero {
+            constructor(skill1, skill2){
+                this.q = skill1;
+                this.w = skill2;
+            }
+        }
+        new Hero()
+        
+    </script>
+</body>
+</html>
