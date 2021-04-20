@@ -7,5 +7,5 @@
 
 ## 결과참조
 
-[https://youtu.be/dHrI-_xq1Vo](https://youtu.be/dHrI-_xq1Vo)
+[https://youtu.be/dHrI-\_xq1Vo](https://youtu.be/dHrI-_xq1Vo)
 

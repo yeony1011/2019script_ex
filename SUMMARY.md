@@ -26,3 +26,8 @@
 * [basic5-6](javascript-basic/basic5-6.md)
 * [class](javascript-basic/class.md)
 
+## secretcode
+
+* [form](secretcode/form.md)
+* [other case](secretcode/other-case.md)
+

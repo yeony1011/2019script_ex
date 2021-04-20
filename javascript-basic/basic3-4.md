@@ -7,5 +7,5 @@
 
 ## 결과참조
 
-[https://youtube.com/playlist?list=PLfLgtT94nNq0svPBSslzReYKbZRuv_-NK](https://youtube.com/playlist?list=PLfLgtT94nNq0svPBSslzReYKbZRuv_-NK)
+[https://youtube.com/playlist?list=PLfLgtT94nNq0svPBSslzReYKbZRuv\_-NK](https://youtube.com/playlist?list=PLfLgtT94nNq0svPBSslzReYKbZRuv_-NK)
 
