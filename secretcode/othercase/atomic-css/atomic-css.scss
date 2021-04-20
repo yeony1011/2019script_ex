@@ -1,0 +1,103 @@
+// figma : https://www.figma.com/file/9FXkniEMPgZKtJY4GwP60z/SecretCode?node-id=143%3A95
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;500;700&display=swap');
+
+// color palette
+$gray1: #333333;
+$gray2: #4f4f4f;
+$gray3: #828282;
+$gray4: #BDBDBD;
+$gray5: #E0E0E0;
+$gray6: #F2F2F2;
+$gray7: #F9F9F9;
+$primary: #ED234B;
+
+// reset css
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// atomic css
+// flex
+.flx { display: flex; }
+.flx-ac { display: flex; align-items: center; }
+.flx-column { display: flex; flex-direction: column; }
+.baseline { align-items: baseline; }
+
+// margin
+.mgt4 { margin-top: 4px; }
+.mgt8 { margin-top: 8px; }
+.mgt12 { margin-top: 12px; }
+.mgt16 { margin-top: 16px; }
+
+.mgr8 { margin-right: 8px; }
+.mgr32 { margin-right: 32px; }
+
+// padding
+.pd32-24 { padding: 32px 24px; }
+.pd24 { padding: 24px; }
+.pd0-8 { padding: 0 8px; }
+.pd2-8 { padding: 2px 8px; }
+
+// width
+.w10p { width: 10%; }
+.w15p { width: 15%; }
+.w20p { width: 20%; }
+.w30p { width: 30%; }
+.w40p { width: 40%; }
+.w70p { width: 70%; }
+.w60 { width: 60px; flex-shrink: 0; }
+.min-w-1000 { min-width: 1000px; }
+
+// height
+.h32 { height: 32px; }
+
+// border-radius
+.bd-r4 { border-radius: 4px; }
+.bd-r8 { border-radius: 8px; }
+
+// border
+.bd-top { border-top: 1px solid $gray5; }
+.bd-bottom { border-bottom: 1px solid $gray5; }
+
+// background
+.bg-white { background-color: #fff; }
+.bg-gray1 { background-color: $gray1; }
+.bg-gray7 { background-color: $gray7; }
+.bg-primary { background-color: $primary; }
+
+// font-size
+.fz10 { font-size: 10px; }
+.fz14 { font-size: 14px; }
+.fz20 { font-size: 20px; }
+.fz24 { font-size: 24px; }
+
+// font-weight
+.fw400 { font-weight: 400; }
+.fw700 { font-weight: 700; }
+
+// color
+.color-white { color: #fff; }
+.color-black { color: #000; }
+.color-gray1 { color: $gray1; }
+.color-gray2 { color: $gray2; }
+.color-gray3 { color: $gray3; }
+.color-gray4 { color: $gray4; }
+.color-gray5 { color: $gray5; }
+.color-gray6 { color: $gray6; }
+.color-gray7 { color: $gray7; }
+.color-primary { color: $primary; }
+
+// overflow
+.overflow-auto { overflow: auto; }
+
+// box-shaodw
+.box-shadow { box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); }
