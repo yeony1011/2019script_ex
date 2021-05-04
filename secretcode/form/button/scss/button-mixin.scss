@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+@mixin button($color) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  height: 38px;
+  margin: 0;
+  padding: 0 12px;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: $color;
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+  &:hover {
+    background-color: darken($color, 5%);
+  }
+}
+
+@mixin button-outline($color) {
+  @include button($color);
+
+  border: 1px solid $color;
+  color: $color;
+  background-color: #fff;
+
+  &:hover {
+    color: #fff;
+    background-color: $color;
+  }
+}
+
+.btn {
+  @include button(#6c757d);
+}
+.btn-danger {
+  @include button(#f15d5d);
+}
+.btn-warning {
+  @include button(#ffc107);
+}
+.btn-primary {
+  @include button(#5d04d9);
+}
+.btn-success {
+  @include button(#06bf9d);
+}
+.btn-dark {
+  @include button(#212529);
+}
+
+.btn-outline {
+  @include button-outline(#6c757d);
+}
+.btn-outline-danger {
+  @include button-outline(#f15d5d);
+}
+.btn-outline-warning {
+  @include button-outline(#ffc107);
+}
+.btn-outline-primary {
+  @include button-outline(#5d04d9);
+}
+.btn-outline-success {
+  @include button-outline(#06bf9d);
+}
+.btn-outline-dark {
+  @include button-outline(#212529);
+}

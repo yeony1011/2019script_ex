@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+@mixin button($color, $outline: true) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  height: 38px;
+  margin: 0;
+  padding: 0 12px;
+  border: 0;
+  outline: 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  @if $outline {
+    color: $color;
+    border: 1px solid $color;
+    background-color: #fff;
+
+    &:hover {
+      color: #fff;
+      background-color: $color;
+    }
+  } @else {
+    color: #fff;
+    background-color: $color;
+
+    &:hover {
+      background-color: darken($color, 5%);
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+}
+
+.btn {
+  @include button(#6c757d, $outline: false);
+}
+.btn-danger {
+  @include button(#f15d5d, $outline: false);
+}
+.btn-warning {
+  @include button(#ffc107, $outline: false);
+}
+.btn-primary {
+  @include button(#5d04d9, $outline: false);
+}
+.btn-success {
+  @include button(#06bf9d, $outline: false);
+}
+.btn-dark {
+  @include button(#212529, $outline: false);
+}
+
+.btn-outline {
+  @include button(#6c757d, $outline: true);
+}
+.btn-outline-danger {
+  @include button(#f15d5d, $outline: true);
+}
+.btn-outline-warning {
+  @include button(#ffc107, $outline: true);
+}
+.btn-outline-primary {
+  @include button(#5d04d9, $outline: true);
+}
+.btn-outline-success {
+  @include button(#06bf9d, $outline: true);
+}
+.btn-outline-dark {
+  @include button(#212529, $outline: true);
+}

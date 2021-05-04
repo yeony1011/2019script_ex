@@ -1,0 +1,46 @@
+@charset 'UTF-8';
+
+// reset
+hr {
+  display: block;
+  height: 1px;
+  margin: 30px auto;
+  border: 0;
+  background-color: #959da5;
+}
+
+// radio button
+.item-radio {
+  overflow: hidden;
+  position: relative;
+
+  .input-label {
+    display: block;
+    padding: 5px 0 5px 23px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: 0;
+      outline: 0;
+      background: url("../images/sprite_radio.png") no-repeat 0 0;
+      background-size: 16px 40px;
+    }
+  }
+  .input-radio {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+
+    &:checked + .input-label:before {
+      background-position: 0 -20px;
+    }
+    &:disabled + .input-label {
+      opacity: 0.5;
+    }
+  }
+}

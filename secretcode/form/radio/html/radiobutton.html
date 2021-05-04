@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>radio button</title>
+    <link rel="stylesheet" href="../css/radiobutton.css" />
+  </head>
+  <body>
+    <h1 style="font-size: 24px">브라우저 기본형</h1>
+
+    <!-- default 상태 -->
+    <input type="radio" id="default" name="default" />
+    <label for="default">기본형</label>
+
+    <!-- checked 상태 -->
+    <input type="radio" id="default" name="default" checked="checked" />
+    <label for="default">Checked</label>
+
+    <!-- disabled 상태 -->
+    <input type="radio" id="default" name="default" disabled="disabled" />
+    <label for="default">Disabled</label>
+
+    <!-- checked + disabled 상태 -->
+    <input type="radio" id="default" name="default" checked="checked" disabled="disabled" />
+    <label for="default">Checked + Disabled</label>
+
+    <hr />
+
+    <h1 style="font-size: 24px">sprite image로 디자인 구현해보기</h1>
+
+    <!-- default 상태 -->
+    <div class="item-radio">
+      <input type="radio" name="group" id="item-default" class="input-radio" />
+      <label for="item-default" class="input-label">default</label>
+    </div>
+
+    <!-- checked 상태 -->
+    <div class="item-radio">
+      <input type="radio" name="group" id="item-checked" class="input-radio" checked="checked" />
+      <label for="item-checked" class="input-label">checked</label>
+    </div>
+
+    <!-- disabled 상태 -->
+    <div class="item-radio">
+      <input type="radio" name="group" id="item-disabled" class="input-radio" disabled="disabled" />
+      <label for="item-disabled" class="input-label">disabled</label>
+    </div>
+
+    <!-- checked + disabled 상태 -->
+    <div class="item-radio">
+      <input type="radio" name="group2" id="item-checked-disabled" class="input-radio" checked="checked" disabled="disabled" />
+      <label for="item-checked-disabled" class="input-label">checked + disabled</label>
+    </div>
+
+    <hr />
+
+    <h1 style="font-size: 24px">옵션 텍스트가 길어질 경우</h1>
+
+    <!-- sample -->
+    <div class="item-radio">
+      <input type="radio" name="sample" id="sample-option1" class="input-radio" checked="checked" />
+      <label for="sample-option1" class="input-label">라디오 버튼 옵션 텍스트가 두줄이 됩니다.<br />라디오 버튼 옵션 텍스트가 두줄이 됩니다.</label>
+    </div>
+    <div class="item-radio">
+      <input type="radio" name="sample" id="sample-option2" class="input-radio" />
+      <label for="sample-option2" class="input-label">라디오 버튼 옵션 텍스트가 두줄이 됩니다.<br />라디오 버튼 옵션 텍스트가 두줄이 됩니다.</label>
+    </div>
+    <div class="item-radio">
+      <input type="radio" name="sample" id="sample-option3" class="input-radio" />
+      <label for="sample-option3" class="input-label">라디오 버튼 옵션 텍스트가 두줄이 됩니다.<br />라디오 버튼 옵션 텍스트가 두줄이 됩니다.</label>
+    </div>
+    <div class="item-radio">
+      <input type="radio" name="sample" id="sample-option4" class="input-radio" disabled="disabled" />
+      <label for="sample-option4" class="input-label">라디오 버튼 옵션 텍스트가 두줄이 됩니다.<br />라디오 버튼 옵션 텍스트가 두줄이 됩니다.</label>
+    </div>
+  </body>
+</html>

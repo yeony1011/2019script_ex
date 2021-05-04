@@ -1,0 +1,143 @@
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 56px;
+  height: 38px;
+  margin: 0;
+  padding: 0 12px;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  background-color: #6c757d;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #60686f;
+  text-decoration: none;
+}
+
+.btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.btn-danger {
+  background-color: #f15d5d;
+}
+
+.btn-danger:hover {
+  background-color: #ef4646;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+}
+
+.btn-warning:hover {
+  background-color: #edb100;
+}
+
+.btn-primary {
+  background-color: #5d04d9;
+}
+
+.btn-primary:hover {
+  background-color: #5204c0;
+}
+
+.btn-success {
+  background-color: #06bf9d;
+}
+
+.btn-success:hover {
+  background-color: #05a689;
+}
+
+.btn-dark {
+  background-color: #212529;
+}
+
+.btn-dark:hover {
+  background-color: #16181b;
+}
+
+.btn-outline {
+  border: 1px solid #6c757d;
+  background-color: #fff;
+  color: #6c757d;
+}
+
+.btn-outline:hover {
+  color: #fff;
+  background-color: #6c757d;
+}
+
+.btn-outline-danger {
+  border: 1px solid #f15d5d;
+  background-color: #fff;
+  color: #f15d5d;
+}
+
+.btn-outline-danger:hover {
+  color: #fff;
+  background-color: #f15d5d;
+}
+
+.btn-outline-warning {
+  border: 1px solid #ffc107;
+  background-color: #fff;
+  color: #ffc107;
+}
+
+.btn-outline-warning:hover {
+  color: #fff;
+  background-color: #ffc107;
+}
+
+.btn-outline-primary {
+  border: 1px solid #5d04d9;
+  background-color: #fff;
+  color: #5d04d9;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #5d04d9;
+}
+
+.btn-outline-success {
+  border: 1px solid #06bf9d;
+  background-color: #fff;
+  color: #06bf9d;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #06bf9d;
+}
+
+.btn-outline-dark {
+  border: 1px solid #212529;
+  background-color: #fff;
+  color: #212529;
+}
+
+.btn-outline-dark:hover {
+  color: #fff;
+  background-color: #212529;
+}

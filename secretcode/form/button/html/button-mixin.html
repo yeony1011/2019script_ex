@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Button</title>
+    <link rel="stylesheet" href="../css/button-mixin.css" />
+  </head>
+  <body>
+    <h1 style="font-size: 20px">버튼 텍스트가 2자 이하인 경우</h1>
+    <button type="button" class="btn">확인</button>
+
+    <h1 style="margin-top: 30px; font-size: 20px">버튼 텍스트가 4자 이상인 경우</h1>
+    <button type="button" class="btn">저장하기</button>
+
+    <h1 style="margin-top: 30px; font-size: 20px">버튼 텍스트가 길어진 경우</h1>
+    <button type="button" class="btn">일이삼사오육칠팔구십</button>
+
+    <h1 style="margin-top: 30px; font-size: 20px">disabled 상태</h1>
+    <button type="button" disabled="disabled" class="btn">저장하기</button>
+
+    <h1 style="margin-top: 30px; font-size: 20px">[버튼 mixin] Color variation</h1>
+    <div>
+      <button type="button" class="btn">저장하기</button>
+      <button type="button" class="btn btn-danger">저장하기</button>
+      <button type="button" class="btn btn-warning">저장하기</button>
+      <button type="button" class="btn btn-primary">저장하기</button>
+      <button type="button" class="btn btn-success">저장하기</button>
+      <button type="button" class="btn btn-dark">저장하기</button>
+    </div>
+
+    <h1 style="margin-top: 30px; font-size: 20px">[버튼 mixin] Outline color variation</h1>
+    <div>
+      <button type="button" class="btn btn-outline">저장하기</button>
+      <button type="button" class="btn btn-outline-danger">저장하기</button>
+      <button type="button" class="btn btn-outline-warning">저장하기</button>
+      <button type="button" class="btn btn-outline-primary">저장하기</button>
+      <button type="button" class="btn btn-outline-success">저장하기</button>
+      <button type="button" class="btn btn-outline-dark">저장하기</button>
+    </div>
+  </body>
+</html>
