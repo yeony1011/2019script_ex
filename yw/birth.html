@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body{min-width:320px;margin:0;font-family: 'Noto Sans KR', sans-serif;}
+        .box_date{position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);width:300px;text-align:center}
+        .inner_date{overflow:hidden;border:1px solid #9146FF;border-radius:10px}
+        .inp_date{width:180px;border:0;padding:10px;box-sizing:border-box;}
+        .btn_g{border:0;border-radius:8px;margin-right:2px;padding:10px;background-color:#9146FF;}
+
+        /* Layer */
+.dimmed_layer{position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:#000;background-color:rgba(0,0,0,0.75);opacity:0;
+  -webkit-transition:opacity 0.4s ease;
+  -moz-transition:opacity 0.4s ease;
+  transition:opacity 0.4s ease}
+.popup_layer{display:none;position:fixed;top:50%;left:50%;width:100%;z-index:1010;padding:0 15px;
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+    box-sizing: border-box;}
+.popup_layer .inner_popup_layer{position:relative;background-color:#caa7ff;opacity:0;
+  -webkit-transform:translateY(15px);
+  -moz-transform:translateY(15px);
+  -ms-transform:translateY(15px);
+  transform:translateY(15px);
+  -webkit-transition:transform 0.4s ease;
+  -moz-transition:transform 0.4s ease;
+  transition:transform 0.4s ease}
+.dimmed_layer.on{z-index:1000;opacity:1;
+  -webkit-transition:opacity 0.4s ease;
+  -moz-transition:opacity 0.4s ease;
+  transition:opacity 0.4s ease}
+.popup_layer.on .inner_popup_layer{opacity:1;
+  -webkit-transform:translateY(0);
+  -moz-transform:translateY(0);
+  -ms-transform:translateY(0);
+  transform:translateY(0)}
+.popup_layer .layer_body{display:table;width:100%;height:100%;table-layout:fixed;padding:20px;box-sizing:border-box;word-break:keep-all;
+    font-size:15px;line-height:20px;color:#000;letter-spacing:-0.035em}
+.popup_layer .layer_body .inner_body{display:table-cell;vertical-align:middle;text-align:center}
+.popup_layer .list_detail{height:100%;font-size:0}
+.popup_layer .list_detail li{display:inline-block;width:601px;height:100%;vertical-align:top}
+.popup_layer .list_detail .img_char{margin-top:50px}
+.popup_layer .link_close{position:absolute;top:10px;right:10px}
+.popup_layer .link_close .ico_close{display:inline-block;vertical-align:top;font-size:1px;color:transparent;text-indent:-9999px;width:14px;height:14px;margin:13px;background:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.22517 0.810985C2.03657 0.628827 1.78397 0.528033 1.52177 0.530311C1.25957 0.53259 1.00876 0.637759 0.823352 0.823167C0.637944 1.00858 0.532775 1.25939 0.530497 1.52158C0.528218 1.78378 0.629013 2.03638 0.811171 2.22499L6.58617 7.99999L0.810171 13.775C0.714661 13.8672 0.638478 13.9776 0.586069 14.0996C0.53366 14.2216 0.506074 14.3528 0.504921 14.4856C0.503767 14.6184 0.529068 14.75 0.579349 14.8729C0.62963 14.9958 0.703883 15.1075 0.797776 15.2014C0.891669 15.2953 1.00332 15.3695 1.12622 15.4198C1.24911 15.4701 1.38079 15.4954 1.51357 15.4942C1.64635 15.4931 1.77757 15.4655 1.89958 15.4131C2.02158 15.3607 2.13192 15.2845 2.22417 15.189L8.00017 9.41399L13.7752 15.189C13.9638 15.3711 14.2164 15.4719 14.4786 15.4697C14.7408 15.4674 14.9916 15.3622 15.177 15.1768C15.3624 14.9914 15.4676 14.7406 15.4698 14.4784C15.4721 14.2162 15.3713 13.9636 15.1892 13.775L9.41417 7.99999L15.1892 2.22499C15.3713 2.03638 15.4721 1.78378 15.4698 1.52158C15.4676 1.25939 15.3624 1.00858 15.177 0.823167C14.9916 0.637759 14.7408 0.53259 14.4786 0.530311C14.2164 0.528033 13.9638 0.628827 13.7752 0.810985L8.00017 6.58599L2.22517 0.809985V0.810985Z' fill='%23E0E0E0'/%3E%3C/svg%3E%0A") 0 0 no-repeat;background-size:cover;}}
+.tab_cont .item_cont.on{z-index:1;opacity:1;}
+
+.alert_layer .layer_body{text-align:center;line-height:200px}
+    </style>
+</head>
+<body>
+    <div class="box_date">
+        <div class="inner_date">
+            <input type="date" class="inp_date">
+            <button type="button" class="btn_g">확인</button>
+        </div>
+        <p>생일 입력 후 확인 버튼을 눌러주세요~</p>
+    </div>
+    <div class="dimmed_layer"></div>
+  <div id="layerBirth" class="popup_layer">
+    <div class="inner_popup_layer">
+      <div class="layer_body">
+        용욱아 안녕?ㅋㅋ ( 하 오글거려.. )<br>
+캘리그라피를 최근들어 안쓰기도 했고.. 특별하게 온라인으로 편지를 써봐 ㅋㅋ<br>
+이건 내 개인 서버라 링크를 어디에 공유하지 않는 이상 오빠만 볼 수 있어^^<br>
+그렇게 바라고 바라던 손편지가.. 이제야 도착했네^^<br>
+어쨌든 손으로 내가 직접 다 친고야...ㅎㅎ<br>
+진짜 잊고 있진 않았어~<br>
+어떻게 편지를 줄까 글솜씨 없는데 무슨내용을 쓸까 고민한게 길어졌던것 같아^^<br>
+그래도 찡찡거리지 않고 편지가 잘 도착할 때 까지 기다려 줘서 고마워~ ㅋㅋ<br>
+다음엔 다른면에서 오빠가 바라는 것들을 노력해볼게<br>
+그때까지도 오래 걸리겠지만 잘 기다려줘 ㅋㅋ<br>
+아직 오빠 만나러 가기 전인데.. 지금까지 생일 중에서 제일 행복한 생일이었으면 좋겠다~<br>
+항상 뭔가 말로 표현하는게 어색하고 낯간지럽고 그렇지만 생일 축하하고 사랑해
+      </div>
+      <div class="layer_foot">
+        <a href="#none" class="link_close"><span class="ico_comm ico_close">팝업 닫기</span></a>
+      </div>
+    </div>
+  </div>
+  <!-- <div id="layerBirth3" class="popup_layer alert_layer">
+    <div class="inner_popup_layer">
+      <div class="layer_body">
+        정확한 생일을 입력하세요~!
+      </div>
+      <div class="layer_foot">
+        <a href="#none" class="link_close"><span class="ico_comm ico_close">팝업 닫기</span></a>
+      </div>
+    </div>
+  </div> -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
