@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-modal-and-toast (solution)</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="solution.css" />
+  </head>
+  <body>
+    <div class="background-overlay"></div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <div class="modal-header">
+          <h1 class="modal-title">모달 제목</h1>
+          <img src="./images/icon-close.png" alt="icon close" />
+        </div>
+        <div class="modal-content">
+          모달 내용 모달 내용 모달 내용 모달 내용 모달 내용 모달 내용 모달 내용
+          모달 내용 모달 내용 모달 내용 모달 내용 모달 내용
+        </div>
+        <div class="modal-footer">
+          <button class="modal-footer-button cancel">취소</button>
+          <button class="modal-footer-button confirm">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 현업에서는 보통 JS를 활용하여 토스트 태그를 동적으로 생성하지만 해당 강의에서는 마크업에만 집중하기 위해 HTML 태그를 활용하여 토스트 생성 -->
+    <div class="toast-container">
+      <div class="toast">
+        <div class="toast-content">토스트 내용</div>
+      </div>
+      <div class="toast">
+        <div class="toast-content">
+          토스트 내용이 길어지면 이렇게 표시됩니다. 이렇게 두줄로 보여집니다.
+          이렇게 두줄로 보여집니다. 이렇게 두줄로 보여집니다. 이렇게 두줄로
+          보여집니다. 이렇게 두줄로 보여집니다. 이렇게 두줄로 보여집니다.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

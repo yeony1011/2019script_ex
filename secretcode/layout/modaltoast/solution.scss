@@ -1,0 +1,135 @@
+// color
+$primary: #ed234b;
+$gray: #4f4f4f;
+$background-overlay: rgba(0, 0, 0, 0.08);
+$toast-background: rgba(0, 0, 0, 0.8);
+
+// reset
+html,
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.background-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: $background-overlay;
+  z-index: 999;
+}
+
+.modal-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .modal {
+    background: white;
+    padding: 24px 24px 32px 24px;
+    border-radius: 8px;
+    margin: 0 24px;
+    max-width: 480px;
+    width: 100%;
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .modal-content {
+      margin: 32px 0;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: space-between;
+
+      .modal-footer-button {
+        flex: 1;
+        border-radius: 4px;
+        padding: 12px;
+        color: white;
+        font-weight: bold;
+        border: none;
+        outline: none;
+
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+
+        &.cancel {
+          background-color: $gray;
+        }
+
+        &.confirm {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.toast-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .toast {
+    background: $toast-background;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: white;
+    line-height: 20px;
+    width: 100%;
+    max-width: 400px;
+
+    animation: slideDown 0.8s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+    @keyframes slideDown {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    .toast-content {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  //test
+  .toast-container {
+    justify-content: flex-end;
+    padding: 40px 24px;
+  }
+}
