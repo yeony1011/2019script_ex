@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* variables */
+
+$w100: 100%;
+$half: 50%;
+$item_height: 220px;
+$basis_space: 40px;
+$padding: 15px;
+$box-shadow: 14px 17px 34px -20px rgba(0, 0, 0, 0.75);
+$dimmed: rgba(0, 0, 0, 0.7);
+
+/* reset */
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  position: relative;
+  width: $w100;
+  height: $w100;
+}
+
+img {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  margin: 35px auto 0;
+}
+
+.nth-of-type_wrap {
+  width: $w100;
+  max-width: 1024px;
+  margin: $basis_space auto;
+  padding: $basis_space;
+  background-color: #fafafa;
+  counter-reset: items;
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .item {
+    position: relative;
+    float: left;
+    width: calc(#{$w100} / 4);
+    height: $item_height;
+    padding: $padding;
+    -webkit-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+    color: #000;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    img {
+      position: absolute;
+      left: $half;
+      top: $half;
+      -webkit-transform: translate3d(-$half, -$half, 0);
+      transform: translate3d(-$half, -$half, 0);
+    }
+    &:before {
+      counter-increment: items;
+      content: counter(items);
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      font-size: 50px;
+    }
+    /* type here */
+    /* 4번째부터 시작해서 2번째마다 컬러 red로 지정하기 */
+    &:nth-of-type(2n + 4)::before {
+      color: red;
+    }
+    /* 4번째마다를 제외하고 모두 green 배경색을 지정 */
+    &::before {
+      background: green;
+    }
+    &:nth-of-type(4n)::before {
+      background: initial;
+    }
+    // &:not(:nth-of-type(4n))::before {
+    //     background: green;
+    // }
+    /* 2번째부터 3번째마다 content를 'num_숫자'로 텍스트를 지정 해주세요 ex) 1, 2... => num_1, num_2 (2,5,8,11,14...)*/
+    &:nth-of-type(3n + 2)::before {
+      content: "num_" counter(items);
+    }
+    /* 첫번째 두번째 아이템에 대하여 content를 'abcd_숫자'로 텍스트를 지정해주세요. ('abcd_1', 'abcd_2',3,4)*/
+    &:nth-of-type(-n + 2)::before {
+      content: "abcd_" counter(items);
+    }
+    /* before로 하게 되면 숫자의 위치에도 영향을 주므로 after를 사용했습니다. */
+    &:nth-of-type(11)::after,
+    &:nth-of-type(12)::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $dimmed;
+    }
+  }
+}

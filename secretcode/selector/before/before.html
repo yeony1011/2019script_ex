@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>03-before</title>
+    <link rel="stylesheet" href="solution.css" />
+</head>
+
+<body>
+    <h1>before</h1>
+    <div class="before_wrap">
+        <article>
+            <h2>arrow_up</h2>
+            <a href="#none" class="hamburger up_arrow">
+                <span></span>
+            </a>
+        </article>
+        <article>
+            <h2>arrow_left</h2>
+            <a href="#none" class="hamburger left_arrow">
+                <span></span>
+            </a>
+        </article>
+        <article>
+            <h2>arrow_right</h2>
+            <a href="#none" class="hamburger right_arrow">
+                <span></span>
+            </a>
+        </article>
+        <article>
+            <h2>btn_minus</h2>
+            <a href="#none" class="hamburger btn_minus">
+                <span></span>
+            </a>
+        </article>
+    </div>
+    <script>
+        document.querySelectorAll('.hamburger').forEach(($elm) => {
+            $elm.addEventListener('click', (e) => {
+                e.currentTarget.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+
+</html>

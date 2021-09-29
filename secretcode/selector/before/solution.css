@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+/* reset */
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    margin: 35px auto 0;
+}
+
+.before_wrap {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1024px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fafafa;
+    counter-reset: items;
+}
+
+.before_wrap article {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.before_wrap article h2 {
+    width: 8rem;
+    text-align: right;
+}
+
+.before_wrap article .hamburger {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 10rem;
+    height: 10rem;
+    margin: 40px;
+    background: blanchedalmond;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: .7;
+    /* type here */
+    position: relative;
+    /* ie8을 fallback대응 할 것이라면 :before 을 사용하세요. */
+    /* 실무에서는 아이콘 등 이미지 삽입에 매우 유용하게 사용됩니다. */
+    /* content에 들어가는 요소에 대해서 중요성 있게 다룰 필요가 있습니다. */
+    /* minus */
+    /* left, right, up */
+    /* up */
+    /* right */
+}
+
+.before_wrap article .hamburger:hover {
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+.before_wrap article .hamburger:hover span:before {
+    top: 1.2rem;
+}
+
+.before_wrap article .hamburger:hover span:after {
+    top: -1.2rem;
+}
+
+.before_wrap article .hamburger span {
+    display: block;
+    position: relative;
+    width: 3rem;
+    height: .4rem;
+    background: black;
+    transition: 0.3s;
+    border-radius: 3rem;
+}
+
+.before_wrap article .hamburger span:before,
+.before_wrap article .hamburger span:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: .8rem;
+    height: .4rem;
+    width: 3rem;
+    background: black;
+    border-radius: 1rem;
+    transition: 0.3s;
+}
+
+.before_wrap article .hamburger span:after {
+    top: -.8rem;
+}
+
+.before_wrap article .hamburger.open span:before,
+.before_wrap article .hamburger.open span:after {
+    top: 0;
+}
+
+.before_wrap article .hamburger.open.left_arrow span:before,
+.before_wrap article .hamburger.open.left_arrow span:after,
+.before_wrap article .hamburger.open.right_arrow span:before,
+.before_wrap article .hamburger.open.right_arrow span:after,
+.before_wrap article .hamburger.open.up_arrow span:before,
+.before_wrap article .hamburger.open.up_arrow span:after {
+    width: 1.5rem;
+    top: 0;
+}
+
+.before_wrap article .hamburger.open.left_arrow span:before,
+.before_wrap article .hamburger.open.right_arrow span:before,
+.before_wrap article .hamburger.open.up_arrow span:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.before_wrap article .hamburger.open.left_arrow span:after,
+.before_wrap article .hamburger.open.right_arrow span:after,
+.before_wrap article .hamburger.open.up_arrow span:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+}
+
+.before_wrap article .hamburger.open.up_arrow {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.before_wrap article .hamburger.open.right_arrow span:before {
+    -webkit-transform: translate3d(1.5rem, 0, 0) rotate(-45deg);
+    transform: translate3d(1.5rem, 0, 0) rotate(-45deg);
+    -webkit-transform-origin: right top;
+    transform-origin: right top;
+}
+
+.before_wrap article .hamburger.open.right_arrow span:after {
+    -webkit-transform: translate3d(1.5rem, 0, 0) rotate(45deg);
+    transform: translate3d(1.5rem, 0, 0) rotate(45deg);
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+}

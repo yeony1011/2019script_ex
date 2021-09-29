@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* variables */
+/* reset */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  margin: 35px auto 0;
+}
+
+.nth-of-type_wrap {
+  width: 100%;
+  max-width: 1024px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #fafafa;
+  counter-reset: items;
+}
+
+.nth-of-type_wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.nth-of-type_wrap .item {
+  position: relative;
+  float: left;
+  width: calc(100% / 4);
+  height: 220px;
+  padding: 15px;
+  -webkit-box-shadow: 14px 17px 34px -20px rgba(0, 0, 0, 0.75);
+  box-shadow: 14px 17px 34px -20px rgba(0, 0, 0, 0.75);
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* type here */
+  /* 4번째부터 시작해서 2번째마다 컬러 red로 지정하기 */
+  /* 4번째마다를 제외하고 모두 green 배경색을 지정 */
+  /* 2번째부터 3번째마다 content를 'num_숫자'로 텍스트를 지정 해주세요 ex) 1, 2... => num_1, num_2 (2,5,8,11,14...)*/
+  /* 첫번째 두번째 아이템에 대하여 content를 'abcd_숫자'로 텍스트를 지정해주세요. ('abcd_1', 'abcd_2',3,4)*/
+  /* before로 하게 되면 숫자의 위치에도 영향을 주므로 after를 사용했습니다. */
+}
+
+.nth-of-type_wrap .item img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.nth-of-type_wrap .item:before {
+  counter-increment: items;
+  content: counter(items);
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 50px;
+}
+
+.nth-of-type_wrap .item:nth-of-type(2n + 4)::before {
+  color: red;
+}
+
+.nth-of-type_wrap .item::before {
+  background: green;
+}
+
+.nth-of-type_wrap .item:nth-of-type(4n)::before {
+  background: initial;
+}
+
+.nth-of-type_wrap .item:nth-of-type(3n + 2)::before {
+  content: "num_" counter(items);
+}
+
+.nth-of-type_wrap .item:nth-of-type(-n + 2)::before {
+  content: "abcd_" counter(items);
+}
+
+.nth-of-type_wrap .item:nth-of-type(11)::after, .nth-of-type_wrap .item:nth-of-type(12)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/* variables */
+
+$w100: 100%;
+$basis_space: 40px;
+$padding: 15px;
+$speed: 0.3s;
+$menuWidth: 1.5rem;
+$angle: 45deg;
+
+/* reset */
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html,
+body {
+    position: relative;
+    width: $w100;
+    height: $w100;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    margin: 35px auto 0;
+}
+
+.before_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: $w100;
+    max-width: 1024px;
+    margin: $basis_space auto;
+    padding: $basis_space;
+    background-color: #fafafa;
+    counter-reset: items;
+    article {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        h2 {
+            width: 8rem;
+            text-align: right;
+        }
+        .hamburger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 10rem;
+            height: 10rem;
+            margin: $basis_space;
+            background: blanchedalmond;
+            cursor: pointer;
+            user-select: none;
+            opacity: .7;
+            /* type here */
+            position: relative;
+            &:hover {
+                transition: opacity $speed;
+                opacity: 1;
+                span:before {
+                    top: 1.2rem;
+                }
+                span:after {
+                    top: -1.2rem;
+                }
+            }
+            span {
+                display: block;
+                position: relative;
+                width: 3rem;
+                height: .4rem;
+                background: black;
+                transition: $speed;
+                border-radius: 3rem;
+                &:before,
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: .8rem;
+                    // z-index: -1;
+                    height: .4rem;
+                    width: 3rem;
+                    background: black;
+                    border-radius: 1rem;
+                    transition: $speed;
+                }
+                &:after {
+                    top: -.8rem;
+                }
+            }
+            /* ie8을 fallback대응 할 것이라면 :before 을 사용하세요. */
+            /* 실무에서는 아이콘 등 이미지 삽입에 매우 유용하게 사용됩니다. */
+            /* content에 들어가는 요소에 대해서 중요성 있게 다룰 필요가 있습니다. */
+            /* minus */
+            &.open span:before,
+            &.open span:after {
+                top: 0;
+            }
+            /* left, right, up */
+            &.open.left_arrow span,
+            &.open.right_arrow span,
+            &.open.up_arrow span {
+                &:before,
+                &:after {
+                    width: $menuWidth;
+                    top: 0;
+                }
+                &:before {
+                    transform: rotate($angle);
+                    transform-origin: left top;
+                }
+                &:after {
+                    transform: rotate(-$angle);
+                    transform-origin: left bottom;
+                }
+            }
+            /* up */
+            &.open.up_arrow {
+                transform: rotate($angle * 2);
+            }
+            /* right */
+            &.open.right_arrow span {
+                &:before {
+                    transform: translate3d($menuWidth, 0, 0) rotate(-$angle);
+                    transform-origin: right top;
+                }
+                &:after {
+                    transform: translate3d($menuWidth, 0, 0) rotate($angle);
+                    transform-origin: right bottom;
+                }
+            }
+        }
+    }
+}
