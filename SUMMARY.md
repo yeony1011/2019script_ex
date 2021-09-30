@@ -31,5 +31,4 @@
 * [form](secretcode/form.md)
 * [layout](secretcode/layout.md)
 * [other case](secretcode/other-case.md)
-* [selector](secretcode/selector.md)
 
