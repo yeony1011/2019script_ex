@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css - width TEST</title>
+  <style>
+    body{margin:0;padding:0}
+    p{margin:0}
+    main{width:1000px;margin:0 auto}
+    [class^="width"]{width:100%;margin-bottom:10px;padding:10px;border:1px solid #000;box-sizing:border-box}
+    [class^="width"] p{background-color:yellow}
+    .width1{width:300px}
+    .width1 p{width:500px}
+    .width2 p{width:50%}
+    .width3 p{width:100%;margin:10px 50px}
+    .width4 p{margin:10px 50px}
+    .width5 p{width:min-content}
+    .width6 p{width:max-content}
+    .width7 p{width:fit-content}
+    .width8{width:200px}
+    .width8 p{width:fit-content}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>css - width TEST</h1>
+    <h2>width 너비를 결정 짓는 원리</h2>
+
+    <div class="width1">
+      <h3>width - px 고정값</h3>
+      <p>CSS width 속성 테스트 문구 입니다.</p>
+    </div>
+
+    <div class="width2">
+      <h3>width - % 유동값</h3>
+      <p>CSS width 속성 테스트 문구 입니다.</p>
+    </div>
+
+    <div class="width3">
+      <h3>width - 100%, margin</h3>
+      <p>CSS width 속성 테스트 문구 입니다.</p>
+    </div>
+
+    <div class="width4">
+      <h3>width - auto, margin</h3>
+      <p>CSS width 속성 테스트 문구 입니다.</p>
+    </div>
+
+    <div class="width5">
+      <h3>width - min-content</h3>
+      <p>CSS width 속성 테스트 문구 입니다.</p>
+    </div>
+
+    <div class="width6">
+      <h3>width - max-content</h3>
+      <p>CSS width 속성 테스트 문구 입니다.</p>
+    </div>
+
+    <div class="width7">
+      <h3>width - fit-content (max-content 처럼)</h3>
+      <p>CSS width 속성 테스트 문구 입니다.</p>
+    </div>
+
+    <div class="width8">
+      <h3>width - fit-content (auto 처럼)</h3>
+      <p>CSS width 속성 테스트 문구 입니다.</p>
+    </div>
+  </main>
+</body> 
+</html>
