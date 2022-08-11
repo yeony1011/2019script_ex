@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>소수 구하기</title>
+</head>
+<body>
+  <P>
+    1 - 10000 사이의 소수를 화면에 출력하는 프로그램을 작성해 봅시다.<br>
+    HTML + JS로 작성할 것<br>
+    객체와 메소드를 사용해 볼 것<br>
+    최대한 예쁘게 만들어 볼 것
+  </P>
+  
+  <P>
+    numbers = {};<br>
+    numbers.all = [];<br>
+    numbers.prime = [];<br>
+    numbers.isPrime = function(number);<br>
+    numbers.addPrime = function(number);<br>
+    numbers.getAllPrimes = function();<br>
+    numbers.addAll = function(max_num);
+  </P>
+  
+  <p id="result"></p>
+  
+  <script>
+    var numbers = {};
+    numbers.all = [];
+    numbers.prime = [];
+
+    numbers.addAllNumber = function(max_num) {
+      for (var i = 2; i <= max_num; i++) {
+        this.all.push(i);
+      }
+    };
+
+    numbers.isPrime = function(number) {
+      for (var i = 2; i < number; i++) {
+        if (number % i == 0) {
+          return false;
+        }
+      }
+      return true;
+    };
+
+    numbers.addAllNumber = function(max_num) {
+      for (var i = 2; i <= max_num; i++) {
+        this.all.push(i);
+      }
+    };
+
+    numbers.calcPrimes = function() {
+      for (var i = 0; i < this.all.length; i++) {
+        var n = this.all[i];
+        if (this.isPrime(n)) {
+          this.prime.push(n);
+        }
+      }
+    };
+
+    numbers.getAllPrimeNumbers = function() {
+      var ret = "";
+      ret += "<h2>전체 소수의 갯수:" + this.prime.length + "</h2>\n";
+      for (var i = 0; i < this.prime.length; i++) {
+        ret += (i+1) + "번째 소수: " + this.prime[i] + "<br>\n";
+      }
+      return ret;
+    };
+
+    // numbers = {
+    //   ...numbers,
+    //   'addAllNumber': function(maxNum){
+    //     for(var i=2; i <= maxNum; i++){
+    //       this.all.push(i);
+    //     }
+    //   },
+    //   'isPrime': function(number){
+    //     if(number >= 1 && number <= 10000){
+    //       for(var i=2 ; i <= number; i++){
+    //         number % i == 0;
+    //         alert(number+'는 소수가 맞습니다');
+    //         return number;
+    //       }
+    //     }else{
+    //       alert('1부터 10000이하 숫자만 입력해주세요.');
+    //     }
+    //   },
+    //   'calcPrimes': function(){
+    //     for(var i=2; i <= this.all.length; i++){
+    //       var n = this.all[i];
+    //       if(this.isPrime(n)){
+    //         this.prime.push(i);
+    //       }
+    //     }
+    //   },
+    //   'getAllPrimeNumbers': function(){
+    //     var result = '';
+    //     result = "<p>전체 소수 개수 : "+ this.prime.length +"</p>";
+    //   }
+    // };
+
+    numbers.addAllNumber(10);
+    numbers.calcPrimes();
+    document.getElementById('result').innerHTML = numbers.getAllPrimeNumbers();
+  </script>
+</body>
+</html>
