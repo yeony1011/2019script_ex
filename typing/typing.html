@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Css Animation</title>
+  <style>
+    /* reset */
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+    fieldset,img{border:0 none}
+    dl,ul,ol,menu,li {list-style:none}
+    blockquote, q {quotes:none}
+    blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+    input,select,textarea,button {font-size:100%;vertical-align:middle}
+    button {border:0 none;background-color:transparent;cursor:pointer}
+    table {border-collapse:collapse;border-spacing:0}
+    body{-webkit-text-size-adjust:none} input[type='text'],input[type='password'],input[type='submit'],input[type='search'] {-webkit-appearance:none; border-radius:0}
+    input:checked[type='checkbox'] {background-color:#666; -webkit-appearance:checkbox}
+    button,html input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button; border-radius:0}
+    body {background-color:#fff}
+    body,th,td,input,select,textarea,button {font-size:15px;line-height:1.5;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;color:#333}
+    a {color:#333;text-decoration:none} a:active, a:hover {text-decoration:none}
+    address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+
+    body{overflow:hidden}
+    .wrap_content{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+    }
+    .inner_content{
+      display:inline-flex;
+    }
+    .txt_content{
+      overflow:hidden;
+      width:420px;
+      border-right:4px solid #000;
+      font-weight:400;
+      font-size:60px;
+      white-space:nowrap;
+      text-align:center;
+      animation: typewriter 2s steps(21),
+      blinkTextCursour 0.5s steps(21) infinite normal;
+    }
+    @keyframes typewriter{
+      0%{
+        width:0
+      }
+      /* 100%{
+        width:100%
+      } */
+    }
+    @keyframes blinkTextCursour{
+      0%{
+        border-right-color:#000;
+      }
+      100%{
+        border-right-color:transparent;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap_content">
+    <div class="inner_content">
+      <span class="txt_content">I'm a Developer.</span>
+    </div>
+  </div>
+</body>
+</html>
