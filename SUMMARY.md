@@ -9,10 +9,11 @@
 * [modal(layer popup) 기능](layer.md)
 * [플러스/마이너스 카운트 기능](count.md)
 * [width 너비](width.md)
+* [Typing Animation](typing-animation.md)
 
 ## Learning JavaScript
 
-* [CHAPTER1  첫 번째 애플리케이션](learning-javascript/learning-chapter1.md)
+* [CHAPTER1 첫 번째 애플리케이션](learning-javascript/learning-chapter1.md)
 * [CHAPTER2 자바스크립트 개발 도구](learning-javascript/learning-chapter2.md)
 * [CHAPTER3 리터럴과 변수, 상수, 데이터 타입](learning-javascript/learning-chapter3.md)
 * [CHAPTER4 제어문](learning-javascript/learning-chapter4.md)
