@@ -10,6 +10,7 @@
 * [플러스/마이너스 카운트 기능](count.md)
 * [width 너비](width.md)
 * [Typing Animation](typing-animation.md)
+* [GSAP](gsap.md)
 
 ## Learning JavaScript
 
